@@ -18,7 +18,7 @@ window.onload = function()
     submit.addEventListener('submit',(e)=>{
         e.preventDefault();
         let keyword = this.document.querySelector('.container-form>form>input[type="search"]').value;
-        var URL = cors+`http://gateway.marvel.com/v1/public/characters?limit=20&nameStartsWith=${keyword}&ts=${ts}&apikey=${Public_key}&hash=${hash}`;
+        var URL = cors+`http://gateway.marvel.com/v1/public/characters?limit=80&nameStartsWith=${keyword}&ts=${ts}&apikey=${Public_key}&hash=${hash}`;
         http = new this.XMLHttpRequest();
         http.onreadystatechange = function(){
             if(http.readyState == 4 && http.status == 200){
