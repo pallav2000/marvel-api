@@ -1,5 +1,6 @@
 window.onload = function()
-{
+{   
+    const cors = 'https://cors-anywhere.herokuapp.com/'
     Public_key = "af8dc2c389a07e056c12fc74fbf0b468";
     Private_key = "b8cd7bac4ec73fc385a27e75ac0bb038cb8faeeb";
     const submit = this.document.querySelector('.container-form>form');
@@ -17,7 +18,7 @@ window.onload = function()
     submit.addEventListener('submit',(e)=>{
         e.preventDefault();
         let keyword = this.document.querySelector('.container-form>form>input[type="search"]').value;
-        var URL = `http://gateway.marvel.com/v1/public/characters?limit=100&nameStartsWith=${keyword}&ts=${ts}&apikey=${Public_key}&hash=${hash}`;
+        var URL = cors+"" `http://gateway.marvel.com/v1/public/characters?limit=100&nameStartsWith=${keyword}&ts=${ts}&apikey=${Public_key}&hash=${hash}`;
        
         http = new this.XMLHttpRequest();
         http.onreadystatechange = function(){
