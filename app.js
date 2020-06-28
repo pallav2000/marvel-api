@@ -50,8 +50,10 @@ window.onload = function()
             div2.innerHTML+=`<h3>${json.data.results[x].name}</h3><img src=${json.data.results[x].thumbnail.path}.jpg></img>`;
             div2.innerHTML+= `<p><b>Description : </b>${json.data.results[x].description}</p>`;
              div2.innerHTML+=`<p><b>Modified : </b>${json.data.results[x].modified}</p>`;
-/*            div2.innerHTML+=`<p><b>Number of Servings : </b>${json.hits[x].recipe.yield}</p>`;
-            div2.innerHTML+= `<p><b>Energy : </b>${json.hits[x].recipe.calories} KCAL</p>`;
+             div2.innerHTML+=`<p><b>Know more : </b><a href="${json.data.results[x].urls[0].url}" target="blank">click here</a></p>`;
+
+        div2.innerHTML+=`<p><b>Comic Link : </b><a href="${json.data.results[x].urls[1].url}" target="blank">click here</a></p>`;
+           /* div2.innerHTML+= `<p><b>Energy : </b>${json.hits[x].recipe.calories} KCAL</p>`;
             div2.innerHTML+=`<p><b>Fats : </b>${json.hits[x].recipe.totalNutrients.FAT.quantity} grams</p>`;
             div2.innerHTML+=`<p><b>Sugar : </b>${json.hits[x].recipe.totalNutrients.SUGAR.quantity} grams</p>`;
             div2.innerHTML+=`<p><b>Cholestrol : </b>${json.hits[x].recipe.totalNutrients.CHOLE.quantity} miligrams</p>`;
